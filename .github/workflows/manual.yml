@@ -2,16 +2,17 @@ name: Manual Workflow
 
 on: 
   workflow_dispatch:
-   
+
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Définir les variables a et b
     env:
-      a: 1
-      b: 2
+      a: 4
+    steps:
+      - name: "Afficher les valeurs a et b"
+        run: echo "$a $b"
+        env:
+          b: 7
   
   job1:
     if: $a > 0
