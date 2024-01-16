@@ -11,7 +11,7 @@ jobs:
       b: 2
   
   job1:
-    if: $a > 0 & $b > 0
+    if: $a > 0
     runs-on : ubuntu-latest
     steps:
         - name: Afficher la valeur a et b
