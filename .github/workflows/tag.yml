@@ -14,7 +14,7 @@ jobs:
         env:
           SEUIL: ${{ vars.VAR 1 }}
         run: |
-        echo $VAR1
+          echo $VAR1
 
   job2:
     needs: job1
