@@ -21,4 +21,6 @@ jobs:
     runs-on : ubuntu-latest
     steps:
       - name: Afficher un message pour préciser que le job précédent à échoué
-        run: if failure {
+        run: |
+          if failure {
+          echo Le job précédent à écoué
