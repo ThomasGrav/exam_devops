@@ -13,13 +13,12 @@ jobs:
       - name: Définir 2 varaibles a et b
   
   job1:
-    if: $a and $b > 0
-    runs-on : ubuntu-latest
+    if: ${{ env.a > 0 && env.b > 0 }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Afficher la valeur de a et b
-        run: |
-          echo $a $b 
+        run: echo "${{ env.a }} ${{ env.b }}"
        
   job2:
     runs-on: ubuntu-latest
