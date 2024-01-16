@@ -10,7 +10,7 @@ jobs:
       a: 4
       b: 8
     steps:
-      - name: Définir 2 varaibles a et b
+      - name: Définir 2 variables a et b
   
   job1:
     if: ${{ env.a > 0 && env.b > 0 }}
