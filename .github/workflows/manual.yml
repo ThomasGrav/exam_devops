@@ -9,14 +9,19 @@ jobs:
     env:
       a: 1
       b: 2
-      
-  job1:
-
-  job2:
-    build:
-      runs-on: ubuntu-latest
   
-      steps:
+  job1:
+    if: $a > 0 & $b > 0
+    runs-on : ubuntu-latest
+    steps:
+        - name: Afficher la valeur a et b
+          run: |
+            echo $a $b 
+       
+  job2:
+    runs-on: ubuntu-latest
+  
+    steps:
       - uses: actions/checkout@v2
   
       - name: Set up Python
@@ -29,6 +34,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
   
-      - name: Train Model
+      - name: Execute Python
         run: |
           python multiplication.py
