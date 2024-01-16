@@ -6,6 +6,9 @@ on:
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Définir les variables a et b
     env:
       a: 1
       b: 2
