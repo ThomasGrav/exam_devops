@@ -1,0 +1,24 @@
+name : Tag Workflow
+
+on :
+  push:
+    tags:
+      - 'v*'
+
+
+jobs:
+  job1:
+    runs-on : ubuntu-latest
+    steps:
+      - name: Afficher la valeur de VAR1
+        env:
+          SEUIL: ${{ vars.VAR 1 }}
+        run: |
+        echo $VAR1
+
+  job2:
+    needs: job1
+    runs-on : ubuntu-latest
+    steps:
+      - name: Afficher un message pour préciser que le job précédent à échoué
+        run: if failure {
