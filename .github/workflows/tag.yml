@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Afficher la valeur de VAR1
         env:
-          SEUIL: ${{ vars.VAR 1 }}
+          SEUIL: ${{ vars.VAR1 }}
         run: |
           echo $VAR1
 
