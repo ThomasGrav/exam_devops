@@ -15,7 +15,7 @@ jobs:
           b: 7
   
   job1:
-    if: $a > 0
+    if: $a and $b > 0
     runs-on : ubuntu-latest
     steps:
       - uses: actions/checkout@v2
