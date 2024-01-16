@@ -10,6 +10,7 @@ jobs:
       a: 4
       b: 8
     steps:
+      - uses: actions/checkout@v2
       - name: Définir 2 variables a et b
         run: echo "a=${{ env.a }} b=${{ env.b }}"
   
