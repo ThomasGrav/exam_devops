@@ -11,8 +11,7 @@ jobs:
       b: 8
     steps:
       - name: Définir 2 variables a et b
-        run: echo "a=${{ env.a }} b=${{ env.b }}"
-  
+
   job1:
     if: ${{ env.a > 0 && env.b > 0 }}
     runs-on: ubuntu-latest
